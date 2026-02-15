@@ -53,7 +53,7 @@ const App: React.FC = () => {
           <section>
             <div className="text-center mb-10">
               <h2 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Portfolio</h2>
-              <h3 className="text-3xl font-bold text-slate-900">Selected Projects</h3>
+              <h3 className="text-2xl font-bold text-slate-900">Selected Projects</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {PROJECTS.map(project => (
@@ -70,7 +70,7 @@ const App: React.FC = () => {
           <section className="bg-white p-8 md:p-12 rounded-[2.5rem] border border-slate-100 shadow-sm">
             <div className="mb-10">
               <h2 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Journey</h2>
-              <h3 className="text-2xl font-bold text-slate-900">Professional Experience</h3>
+              <h3 className="text-xl font-bold text-slate-900">Professional Experience</h3>
             </div>
             
             <div className="space-y-4">
@@ -93,18 +93,29 @@ const App: React.FC = () => {
             <section className="bg-white p-8 md:p-12 rounded-[2.5rem] border border-slate-100 shadow-sm">
               <div className="mb-10">
                 <h2 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Background</h2>
-                <h3 className="text-2xl font-bold text-slate-900">Education</h3>
+                <h3 className="text-xl font-bold text-slate-900">Education</h3>
               </div>
               <div className="space-y-2">
-                {EDUCATIONS.map(edu => (
-                  <ExperienceItem 
-                    key={edu.id}
-                    date={edu.period}
-                    title={edu.school}
-                    subtitle={edu.degree}
-                    bullets={edu.bullets}
-                  />
-                ))}
+                {EDUCATIONS.map(edu => {
+                  // Logic to break the dual degree part on desktop layout (LG+)
+                  const isYonsei = edu.school.includes('Yonsei University');
+                  const subtitleDisplay = (isYonsei && edu.degree.includes(', ')) ? (
+                    <>
+                      {edu.degree.split(', ')[0]},
+                      <br className="hidden lg:block" /> {edu.degree.split(', ')[1]}
+                    </>
+                  ) : edu.degree;
+
+                  return (
+                    <ExperienceItem 
+                      key={edu.id}
+                      date={edu.period}
+                      title={edu.school}
+                      subtitle={subtitleDisplay}
+                      bullets={edu.bullets}
+                    />
+                  );
+                })}
               </div>
             </section>
 
@@ -112,20 +123,32 @@ const App: React.FC = () => {
             <section className="bg-white p-8 md:p-12 rounded-[2.5rem] border border-slate-100 shadow-sm">
               <div className="mb-10">
                 <h2 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Achievements</h2>
-                <h3 className="text-2xl font-bold text-slate-900">Honors & Awards</h3>
+                <h3 className="text-xl font-bold text-slate-900">Honors & Awards</h3>
               </div>
               <div className="space-y-8">
-                {AWARDS.map(award => (
-                  <div key={award.id} className="group">
-                    <div className="flex justify-between items-start mb-1">
-                      <h4 className="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
-                        {award.title}
-                      </h4>
-                      <span className="text-xs font-bold text-slate-400 shrink-0 ml-4">{award.year}</span>
+                {AWARDS.map(award => {
+                  // Logic to break the Jilli Scholarship part on desktop layout (LG+)
+                  const isJilliAward = award.title.includes('(with Jilli Scholarship)');
+                  const titleDisplay = isJilliAward ? (
+                    <>
+                      {award.title.split('(with Jilli Scholarship)')[0]}
+                      <br className="hidden lg:block" />
+                      <span className="lg:text-sm font-semibold opacity-90">(with Jilli Scholarship)</span>
+                    </>
+                  ) : award.title;
+
+                  return (
+                    <div key={award.id} className="group">
+                      <div className="flex justify-between items-start mb-1">
+                        <h4 className="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-snug">
+                          {titleDisplay}
+                        </h4>
+                        <span className="text-xs font-bold text-slate-400 shrink-0 ml-4">{award.year}</span>
+                      </div>
+                      <p className="text-sm text-slate-500">{award.organization}</p>
                     </div>
-                    <p className="text-sm text-slate-500">{award.organization}</p>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </section>
           </div>

@@ -4,7 +4,7 @@ import React, { ReactNode } from 'react';
 interface ExperienceItemProps {
   date: string;
   title: string;
-  subtitle: string;
+  subtitle: ReactNode; // Changed from string to ReactNode
   description?: string;
   bullets?: ReactNode[];
   tags?: string[];
@@ -29,7 +29,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
       <div className="flex flex-col">
         <span className="text-sm font-bold text-slate-400 mb-1">{date}</span>
         <h4 className="text-lg font-bold text-slate-900 leading-tight mb-1">{title}</h4>
-        <span className="text-slate-500 font-medium text-sm mb-3">{subtitle}</span>
+        <div className="text-slate-500 font-medium text-sm mb-3">{subtitle}</div>
         
         {description && <p className="text-slate-600 text-sm mb-3 leading-relaxed">{description}</p>}
         

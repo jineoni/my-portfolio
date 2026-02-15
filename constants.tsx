@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Project, Experience, Education, Award } from './types';
+import { Project, Experience, Education, Award } from './types.ts';
 
 export const PROJECTS: Project[] = [
   {
@@ -23,7 +23,7 @@ export const PROJECTS: Project[] = [
     period: 'Nov. 2024 - Apr. 2025',
     role: 'Team Project',
     description: 'Developed a compatibility scoring algorithm and responsive analytics dashboard for data-driven college consulting.',
-    tags: ['Python', 'NLP', 'React', 'Vertex AI'],
+    tags: ['Python', 'TypeScript', 'OpenAI'],
     image: 'https://picsum.photos/seed/dotori/800/400',
     repoUrl: 'https://github.com/jineoni/dotori-data',
     bullets: [
