@@ -37,6 +37,6 @@ export interface Education {
 export interface Award {
   id: string;
   title: string;
-  organization: string;
+  organization: ReactNode; // Changed from string to ReactNode
   year: string;
 }

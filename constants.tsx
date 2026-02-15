@@ -10,7 +10,7 @@ export const PROJECTS: Project[] = [
     role: 'Undergraduate Capstone Project',
     description: 'Estimated the causal impact of DRT on property values using a Regression Discontinuity Design (RDD) on housing transaction data.',
     tags: ['Python', 'Econometrics'],
-    image: 'https://picsum.photos/seed/drt/800/400',
+    image: 'https://raw.githubusercontent.com/jineoni/my-portfolio/53c1a61cbeaa652d1519c02cee5de22ade2cca64/image/capstone.png',
     bullets: [
       'Constructed accessibility indices from 5,000+ transit nodes to identify transport-disadvantaged areas',
       'Designed a quasi-experimental setup by normalizing accessibility levels and matching comparable regions',
@@ -24,7 +24,7 @@ export const PROJECTS: Project[] = [
     role: 'Team Project',
     description: 'Developed a compatibility scoring algorithm and responsive analytics dashboard for data-driven college consulting.',
     tags: ['Python', 'TypeScript', 'OpenAI'],
-    image: 'https://picsum.photos/seed/dotori/800/400',
+    image: 'https://raw.githubusercontent.com/jineoni/my-portfolio/627152f6c278db2a3f569d8516957849b271d173/image/dotori-dashboard.png',
     repoUrl: 'https://github.com/jineoni/dotori-data',
     bullets: [
       'Built Python pipelines to automatically extract and preprocess admissions data from 100+ Common Data Sets',
@@ -39,7 +39,7 @@ export const PROJECTS: Project[] = [
     role: 'Team Project',
     description: 'Analyzed mode-choice behavior via SP survey and developed a multinomial logit model to assess campus DRT feasibility.',
     tags: ['R', 'SP Survey', 'Logit Model'],
-    image: 'https://picsum.photos/seed/yonsei/800/400',
+    image: 'https://raw.githubusercontent.com/jineoni/my-portfolio/627152f6c278db2a3f569d8516957849b271d173/image/yonsei-mobility-solution.png',
     bullets: [
       'Analyzed mode-choice behavior via Stated Preference (SP) survey of 100 students',
       'Estimated choice probabilities and behavioral drivers for transit modes by developing a multinomial logit model',
@@ -109,7 +109,13 @@ export const AWARDS: Award[] = [
   {
     id: 'award-1',
     title: 'Best Capstone Project Award',
-    organization: 'Dept. of Urban Planning and Engineering, Yonsei University',
+    organization: (
+      <>
+        Dept. of Urban Planning and Engineering, Yonsei University
+        <br />
+        * Selected for ST-Y RISE Fair Exhibition
+      </>
+    ),
     year: '2025'
   },
   {
