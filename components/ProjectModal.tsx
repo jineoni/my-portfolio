@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react';
-import { Project } from '../types';
-import { Icons } from '../constants';
+import { Project } from '../types.ts';
+import { Icons } from '../constants.tsx';
 
 interface ProjectModalProps {
   project: Project;

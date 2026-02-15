@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Icons } from '../constants';
+import { Icons } from '../constants.tsx';
 
 const Header: React.FC = () => {
   return (

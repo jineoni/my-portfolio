@@ -1,11 +1,11 @@
 
 import React, { useState } from 'react';
-import Header from './components/Sidebar';
-import ProjectCard from './components/ProjectCard';
-import ProjectModal from './components/ProjectModal';
-import ExperienceItem from './components/ExperienceItem';
-import { PROJECTS, EXPERIENCES, EDUCATIONS, AWARDS, SKILL_CATEGORIES } from './constants';
-import { Project } from './types';
+import Header from './components/Sidebar.tsx';
+import ProjectCard from './components/ProjectCard.tsx';
+import ProjectModal from './components/ProjectModal.tsx';
+import ExperienceItem from './components/ExperienceItem.tsx';
+import { PROJECTS, EXPERIENCES, EDUCATIONS, AWARDS, SKILL_CATEGORIES } from './constants.tsx';
+import { Project } from './types.ts';
 
 const App: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -102,7 +102,6 @@ const App: React.FC = () => {
                     date={edu.period}
                     title={edu.school}
                     subtitle={edu.degree}
-                    description={edu.details}
                     bullets={edu.bullets}
                   />
                 ))}
