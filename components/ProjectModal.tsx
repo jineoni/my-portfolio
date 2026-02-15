@@ -44,16 +44,13 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
               <span className="inline-block px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-black uppercase tracking-widest mb-4 rounded-full">
                 {project.role}
               </span>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 leading-[1.1] mb-6 tracking-tight">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 leading-[1.1] tracking-tight">
                 {project.title}
               </h2>
-              <p className="text-lg text-slate-500 leading-relaxed font-medium">
-                {project.description}
-              </p>
             </div>
 
             <div className="space-y-12">
-              {/* Timeline Section - Unified with Analysis text style */}
+              {/* Timeline Section */}
               <section>
                 <h4 className="text-[11px] font-bold text-slate-300 uppercase tracking-[0.2em] mb-4 border-b border-slate-50 pb-2">Timeline</h4>
                 <div className="flex items-center gap-2 text-slate-600 font-normal text-[15px]">
@@ -107,7 +104,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
               </div>
             </div>
 
-            {/* Resources Links - Minimalist & Subtle */}
+            {/* Resources Links */}
             <div className="flex flex-col gap-3">
               <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em] mb-1">Resources</h4>
               <div className="flex flex-wrap items-center gap-4">
