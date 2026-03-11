@@ -33,7 +33,7 @@ export const PROJECTS: Project[] = [
     role: 'Undergraduate Capstone Project',
     description: 'An RDD-based causal analysis quantifying the impact of DRT as a catalyst for property value appreciation in transport-disadvantaged areas.',
     tags: ['Python', 'Econometrics'],
-    image: 'https://raw.githubusercontent.com/jineoni/my-portfolio/53c1a61cbeaa652d1519c02cee5de22ade2cca64/image/capstone.png',
+    image: 'https://raw.githubusercontent.com/jineoni/my-portfolio/d90741f693777adf25482fee7f759328c0c1c0c2/capstone.png',
     thumbnailPosition: 'object-right', // 그래프가 있는 우측 강조
     bullets: [
       'Computed regional accessibility indices using Python and GIS to identify target areas',
@@ -67,7 +67,7 @@ export const PROJECTS: Project[] = [
     role: 'Team Project',
     description: 'An AI-powered platform providing personalized, cost-effective, and data-backed college admissions strategies for students.',
     tags: ['Python', 'TypeScript', 'OpenAI', 'FastAPI'],
-    image: 'https://raw.githubusercontent.com/jineoni/my-portfolio/627152f6c278db2a3f569d8516957849b271d173/image/dotori-dashboard.png',
+    image: 'https://raw.githubusercontent.com/jineoni/my-portfolio/d90741f693777adf25482fee7f759328c0c1c0c2/dotori-dashboard.png',
     thumbnailPosition: 'object-center', // 대시보드 중앙 강조
     repoUrl: 'https://github.com/jineoni/dotori-data',
     bullets: [
@@ -97,7 +97,7 @@ export const PROJECTS: Project[] = [
     role: 'Team Project',
     description: 'A feasibility study integrating DRT system design and Logit modeling to overcome infrastructure barriers and optimize campus mobility.',
     tags: ['R', 'SP Survey', 'Logit Model'],
-    image: 'https://raw.githubusercontent.com/jineoni/my-portfolio/627152f6c278db2a3f569d8516957849b271d173/image/yonsei-mobility-solution.png',
+    image: 'https://raw.githubusercontent.com/jineoni/my-portfolio/d90741f693777adf25482fee7f759328c0c1c0c2/yonsei-mobility-solution.png',
     thumbnailPosition: 'object-center', // 다이어그램 중앙 강조
     repoUrl: 'https://github.com/jineoni/mobility-solution-proposal',
     bullets: [
@@ -133,7 +133,7 @@ export const EXPERIENCES: Experience[] = [
     location: 'Seongnam, South Korea',
     role: 'Data Science Intern',
     period: 'May 2025 - Feb. 2026',
-    logo: 'https://raw.githubusercontent.com/jineoni/my-portfolio/bff1c21c02b095544e856cc1c33faa83b7e3d6a3/kakaomobility.png',
+    logo: 'https://raw.githubusercontent.com/jineoni/my-portfolio/d90741f693777adf25482fee7f759328c0c1c0c2/kakaomobility.png',
     description: "South Korea’s leading mobility platform, providing integrated transportation services including taxi-hailing, navigation, and parking.",
     websiteUrl: 'https://www.kakaomobility.com/',
     bullets: [
@@ -178,7 +178,7 @@ export const EXPERIENCES: Experience[] = [
     location: 'Seoul, South Korea',
     role: 'Research Intern',
     period: 'Mar. 2024 - Jun. 2024',
-    logo: 'https://raw.githubusercontent.com/jineoni/my-portfolio/bff1c21c02b095544e856cc1c33faa83b7e3d6a3/yonsei.png',
+    logo: 'https://raw.githubusercontent.com/jineoni/my-portfolio/d90741f693777adf25482fee7f759328c0c1c0c2/yonsei.png',
     description: "Academic research laboratory focused on urban transportation systems, travel behavior analysis, and demand forecasting.",
     bullets: [
       <div className="mb-2">
